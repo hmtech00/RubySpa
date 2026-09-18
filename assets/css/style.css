@@ -1471,3 +1471,14 @@ textarea:focus-visible {
     display: none;
   }
 }
+
+.footer-credit {
+  color: var(--muted-ivory);
+  border-bottom: 1px solid var(--surface-hairline-strong);
+  transition: color var(--dur-fast) var(--ease-editorial), border-color var(--dur-fast) var(--ease-editorial);
+}
+
+.footer-credit:hover {
+  color: var(--ruby-light);
+  border-color: var(--ruby-light);
+}
