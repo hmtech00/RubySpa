@@ -313,6 +313,20 @@ p a {
   box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.55);
 }
 
+.photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--focus, 50% 50%);
+}
+
+.photo:has(img)::after {
+  box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
 .photo--silk { background: radial-gradient(130% 130% at 80% 10%, #6e131e 0%, #34090d 55%, #100608 100%); }
 .photo--velvet { background: radial-gradient(120% 140% at 10% 90%, #4a0e16 0%, #1a0708 60%, #0b0405 100%); }
 .photo--copper { background: radial-gradient(120% 120% at 70% 30%, #3a2418 0%, #1c1310 55%, #0d0908 100%); }
@@ -613,9 +627,9 @@ body.menu-open {
   inset: -4%;
   z-index: 0;
   background:
-    radial-gradient(60% 55% at 78% 18%, rgba(184, 58, 70, 0.4), transparent 60%),
-    radial-gradient(45% 45% at 12% 85%, rgba(201, 169, 141, 0.14), transparent 65%),
-    radial-gradient(140% 120% at 30% 10%, #4a0e16 0%, #1c0708 55%, #0a0405 100%);
+    radial-gradient(60% 55% at 78% 18%, rgba(142, 27, 43, 0.28), transparent 60%),
+    url("../images/treatment-room-palm.jpg") 50% 80% / cover no-repeat,
+    var(--espresso);
   will-change: transform;
   transition: transform 120ms linear;
 }
@@ -635,7 +649,9 @@ body.menu-open {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(11, 6, 7, 0.25) 0%, rgba(11, 6, 7, 0.35) 45%, rgba(9, 5, 6, 0.92) 100%);
+  background:
+    linear-gradient(90deg, rgba(11, 6, 7, 0.78) 0%, rgba(11, 6, 7, 0.4) 55%, rgba(11, 6, 7, 0.15) 100%),
+    linear-gradient(180deg, rgba(11, 6, 7, 0.35) 0%, rgba(11, 6, 7, 0.3) 45%, rgba(9, 5, 6, 0.92) 100%);
 }
 
 .hero-content {

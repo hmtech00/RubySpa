@@ -43,7 +43,8 @@
         "Suitable as a first introduction to Ruby Spa.",
         "Speak with your therapist about any areas of focus.",
       ],
-      photo: "photo--silk",
+      image: "assets/images/treatment-room-green.jpg",
+      alt: "Dimly lit treatment room with a leaf-patterned bedspread, salt lamp and warm candlelight",
     },
     {
       id: "classic",
@@ -60,7 +61,8 @@
         "A good choice if you are unsure which experience to book.",
         "Discretion and privacy are maintained throughout your visit.",
       ],
-      photo: "photo--velvet",
+      image: "assets/images/treatment-room-palm.jpg",
+      alt: "Treatment room with a burgundy blanket, gold palm wallpaper and candlelit shelves",
     },
     {
       id: "premium",
@@ -77,7 +79,8 @@
         "Recommended for returning guests with specific preferences.",
         "Discretion and privacy are maintained throughout your visit.",
       ],
-      photo: "photo--copper",
+      image: "assets/images/corridor-candles.jpg",
+      alt: "Quiet corridor lined with lanterns and textured white walls",
     },
     {
       id: "four-hands",
@@ -94,7 +97,8 @@
         "Subject to availability of two therapists at your preferred time.",
         "Discretion and privacy are maintained throughout your visit.",
       ],
-      photo: "photo--espresso",
+      image: "assets/images/reception.jpg",
+      alt: "Reception with a deep red wall, the Ruby sign, white tulips and a warm lamp",
     },
   ];
 
@@ -253,7 +257,7 @@
           </div>
         </div>
         <a class="menu-item-figure" href="experience.html?id=${exp.id}" aria-label="View ${exp.name} experience">
-          <span class="photo ${exp.photo}"></span>
+          <span class="photo"><img src="${exp.image}" alt="${exp.alt}" width="1264" height="1264" loading="lazy" /></span>
         </a>
       </li>`
       )
@@ -292,7 +296,7 @@
 
     const figure = root.querySelector("[data-exp-figure]");
     if (figure) {
-      figure.className = `photo ${experience.photo}`;
+      figure.innerHTML = `<img src="${experience.image}" alt="${experience.alt}" width="1264" height="1264" />`;
     }
 
     const bookBtn = root.querySelector("[data-exp-book]");
@@ -321,7 +325,7 @@
             </div>
           </div>
           <a class="menu-item-figure" href="experience.html?id=${exp.id}" aria-label="View ${exp.name} experience">
-            <span class="photo ${exp.photo}"></span>
+            <span class="photo"><img src="${exp.image}" alt="${exp.alt}" width="1264" height="1264" loading="lazy" /></span>
           </a>
         </li>`
         )
