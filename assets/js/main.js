@@ -256,9 +256,6 @@
             </a>
           </div>
         </div>
-        <a class="menu-item-figure" href="experience.html?id=${exp.id}" aria-label="View ${exp.name} experience">
-          <span class="photo"><img src="${exp.image}" alt="${exp.alt}" width="1264" height="1264" loading="lazy" /></span>
-        </a>
       </li>`
       )
       .join("");
@@ -324,9 +321,6 @@
               <a class="link-arrow" href="experience.html?id=${exp.id}">Discover ${svgArrow()}</a>
             </div>
           </div>
-          <a class="menu-item-figure" href="experience.html?id=${exp.id}" aria-label="View ${exp.name} experience">
-            <span class="photo"><img src="${exp.image}" alt="${exp.alt}" width="1264" height="1264" loading="lazy" /></span>
-          </a>
         </li>`
         )
         .join("");
@@ -388,7 +382,7 @@
     );
 
     const expandables = document.querySelectorAll(
-      "a, button, .menu-item-figure, .photo"
+      "a, button, .photo"
     );
     expandables.forEach((el) => {
       el.addEventListener("mouseenter", () => dot.classList.add("is-expanded"));
