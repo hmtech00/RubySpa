@@ -35,16 +35,16 @@
       duration: "30 MIN",
       price: "€80",
       summary:
-        "A focused introduction to the Ruby ritual — an unhurried session designed to ease tension and settle the senses.",
+        "A focused introduction to the Ruby ritual, an unhurried session designed to ease tension and settle the senses.",
       whatToExpect:
-        "A calm arrival, a brief consultation, and a 30-minute session paced around your comfort. Lighting, temperature and pressure are adjusted to your preference throughout.",
+        "A calm arrival, a brief consultation, and a 30 minute session paced around your comfort. Lighting, temperature and pressure are adjusted to your preference throughout.",
       info: [
         "Please arrive 10 minutes before your appointment time.",
         "Suitable as a first introduction to Ruby Spa.",
         "Speak with your therapist about any areas of focus.",
       ],
       image: "assets/images/treatment-room-green.jpg",
-      alt: "Dimly lit treatment room with a leaf-patterned bedspread, salt lamp and warm candlelight",
+      alt: "Dimly lit treatment room with a leaf patterned bedspread, salt lamp and warm candlelight",
     },
     {
       id: "classic",
@@ -53,9 +53,9 @@
       duration: "30 MIN",
       price: "€100",
       summary:
-        "Our most requested session — a considered balance of pressure and pace, tailored in the room to how you feel that day.",
+        "Our most requested session. A considered balance of pressure and pace, tailored in the room to how you feel that day.",
       whatToExpect:
-        "A 30-minute session with a short check-in beforehand so your therapist can adapt technique and pressure to your needs on arrival.",
+        "A 30 minute session with a short check in beforehand so your therapist can adapt technique and pressure to your needs on arrival.",
       info: [
         "Please arrive 10 minutes before your appointment time.",
         "A good choice if you are unsure which experience to book.",
@@ -73,7 +73,7 @@
       summary:
         "An elevated version of the Classic, with extended attention given to areas that need it most.",
       whatToExpect:
-        "A 30-minute session with additional time reserved at the start for consultation, so the experience can be shaped closely around you.",
+        "A 30 minute session with additional time reserved at the start for consultation, so the experience can be shaped closely around you.",
       info: [
         "Please arrive 10 minutes before your appointment time.",
         "Recommended for returning guests with specific preferences.",
@@ -89,9 +89,9 @@
       duration: "30 MIN",
       price: "€240",
       summary:
-        "Two therapists, one synchronised session — a fuller, more immersive experience from start to finish.",
+        "Two therapists, one synchronised session. A fuller, more immersive experience from start to finish.",
       whatToExpect:
-        "A 30-minute session delivered by two therapists working in tandem. A short consultation beforehand ensures the pacing suits you.",
+        "A 30 minute session delivered by two therapists working in tandem. A short consultation beforehand ensures the pacing suits you.",
       info: [
         "Please arrive 10 minutes before your appointment time.",
         "Subject to availability of two therapists at your preferred time.",
@@ -276,7 +276,7 @@
     const experience =
       experiences.find((exp) => exp.id === id) || experiences[0];
 
-    document.title = `${experience.name} — Ruby Spa`;
+    document.title = `${experience.name} | Ruby Spa`;
 
     root.querySelector("[data-exp-eyebrow]").textContent = "EXPERIENCE";
     root.querySelector("[data-exp-name]").textContent = experience.name;
